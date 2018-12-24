@@ -156,13 +156,13 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 " set completeopt=menuone,menu,longest
 " au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menu,menuone  
+set completeopt=menu,menuone
 let OmniCpp_MayCompleteDot=1    " 打开  . 操作符
 let OmniCpp_MayCompleteArrow=1  " 打开 -> 操作符
 let OmniCpp_MayCompleteScope=1  " 打开 :: 操作符
 let OmniCpp_NamespaceSearch=1   " 打开命名空间
-let OmniCpp_GlobalScopeSearch=1  
-let OmniCpp_DefaultNamespace=["std"]  
+let OmniCpp_GlobalScopeSearch=1
+let OmniCpp_DefaultNamespace=["std"]
 let OmniCpp_ShowPrototypeInAbbr=1  " 打开显示函数原型
 
 " Auto-Pairs
@@ -183,7 +183,7 @@ let g:AutoPairsLoaded = 0
 " let g:indentLine_char = '|│'
 " let g:indentLine_char = '|'
 let g:indentLine_char = '┊'
-if (has("gui_running")) 
+if (has("gui_running"))
 else
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#A4E57E'
@@ -516,7 +516,7 @@ let g:clang_format#detect_style_file = 1
 let g:clang_format#code_style="llvm"
 
 " buffer explorer
-let g:bufExplorerDefaultHelp=0 
+let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowDirectories=0
 let g:bufExplorerShowRelativePath=0
 let g:bufExplorerSplitRight=1
@@ -532,9 +532,9 @@ map <Leader>t :MBEToggle<cr>
 
 "让vim记忆上次编辑的位置
 autocmd BufReadPost *
-			\ if line("'\"")>0&&line("'\"")<=line("$") |
-			\	exe "normal g'\"" |
-			\ endif
+            \ if line("'\"")>0&&line("'\"")<=line("$") |
+            \	exe "normal g'\"" |
+            \ endif
 
 let g:gitgutter_realtime = 1
 set updatetime=500
