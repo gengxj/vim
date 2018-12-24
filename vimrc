@@ -14,16 +14,20 @@ syntax on
 "--------
 "" color scheme
 set background=dark
-" colorscheme molokai_dark
+colorscheme PaperColor
+" colorscheme molokai
 " colorscheme Tomorrow-Night-Eighties
 " colorscheme Tomorrow-Night
 " colorscheme desertEx
-" colorscheme onedark
-colorscheme PaperColor
+" if !has('gui_running')
+"     let g:solarized_termcolors=256
+"     let g:solarized_termtrans=1
+" endif
+" colorscheme solarized
 
-if (has("gui_running")) 
-    colorscheme desert
-endif
+" if (has("gui_running"))
+"     colorscheme desert
+" endif
 
 " highlight current line
 " set cursorcolumn         		      " high light cursor column
@@ -184,8 +188,7 @@ else
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#A4E57E'
 endif
-" let g:indentLine_fileType = ['python', 'c', 'cpp', 'cc']
-let g:indentLine_enabled = 1
+let g:indentLine_fileType = ['python', 'c', 'cpp', 'cc']
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -287,7 +290,7 @@ function! ToggleErrors()
 endfunction
 
 " tab
-set showtabline=2
+set showtabline=1
 
 " make tabline in terminal mode
 function! Vim_NeatTabLine()
@@ -372,9 +375,10 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_skip_empty_sections = 1
-let g:airline_powerline_fonts = 0
+
 " let g:airline_left_sep = ''
 " let g:airline_right_sep = ''
+"let g:airline_theme='one'
 
 " 关于标签页的标题修改 "
 " 使用了自定义函数  GuiTabLabel()
@@ -531,3 +535,6 @@ autocmd BufReadPost *
 			\ if line("'\"")>0&&line("'\"")<=line("$") |
 			\	exe "normal g'\"" |
 			\ endif
+
+let g:gitgutter_realtime = 1
+set updatetime=500

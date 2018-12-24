@@ -22,7 +22,8 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'fisadev/fisa-vim-colorscheme'
 Bundle 'flazz/vim-colorschemes'
-Plugin 'NLKNguyen/papercolor-theme' 
+Bundle 'rakr/vim-one'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " statusline
 Plugin 'vim-airline/vim-airline'
@@ -54,6 +55,7 @@ Bundle 'Python-Syntax'
 Bundle 'json.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'https://github.com/rhysd/vim-clang-format.git'
+Plugin 'airblade/vim-gitgutter'
 
 " editing
 Bundle 'genutils'
@@ -63,7 +65,7 @@ Bundle 'ctrlp.vim'
 Bundle 'ag.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'delimitMate.vim'
-" Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'bronson/vim-trailing-whitespace'
 
 " file operations
 Bundle 'git://github.com/tpope/vim-eunuch.git'
