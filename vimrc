@@ -61,7 +61,7 @@ set t_Co=256                                                      " Explicitly t
 " set report=0                                                      " always report number of lines changed                "
 " set nowrap                                                        " dont wrap lines
 " set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
-" " set number                                                        " show line numbers
+set number                                                        " show line numbers
 " set showmatch                                                     " show matching bracket (briefly jump)
 " set showcmd                                                       " show typed command in status bar
 " set title                                                         " show file in titlebar
@@ -375,6 +375,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_skip_empty_sections = 1
+let g:airline_theme='papercolor'
 
 " let g:airline_left_sep = ''
 " let g:airline_right_sep = ''
