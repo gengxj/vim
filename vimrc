@@ -31,7 +31,7 @@ colorscheme PaperColor
 
 " highlight current line
 " set cursorcolumn         		      " high light cursor column
-" set cursorline           	          " high light cursor line
+set cursorline           	          " high light cursor line
 " hi CursorLine cterm=underline term=underline ctermbg=None
 
 " textwidth hightligh
@@ -181,8 +181,8 @@ let g:AutoPairsLoaded = 0
 
 " Yggdroot/indentLine
 " let g:indentLine_char = '|│'
-" let g:indentLine_char = '|'
-let g:indentLine_char = '┊'
+let g:indentLine_char = '|'
+" let g:indentLine_char = '┊'
 if (has("gui_running"))
 else
 let g:indentLine_color_term = 239
@@ -539,3 +539,32 @@ autocmd BufReadPost *
 
 let g:gitgutter_realtime = 1
 set updatetime=500
+
+"""""""""""""""" LeaderF
+let g:Lf_ShortcutF = '<c-p>'
+let g:Lf_ShortcutB = '<m-n>'
+" let g:Lf_WindowPosition = 'right'
+" let g:LeaderfFunction = '<m-n>'
+noremap <c-n> :LeaderfMru<cr>
+noremap <m-p> :LeaderfFunction<cr>
+noremap <m-n> :LeaderfBuffer<cr>
+noremap <m-m> :LeaderfTag<cr>
+let g:Lf_StlSeparator = { 'left': '', 'right': '' }
+let g:Lf_CommandMap = {'<C-]>': ['<C-V>']}
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_WindowHeight = 0.30
+let g:Lf_CacheDirectory = expand('~/.vim/cache')
+let g:Lf_ShowRelativePath = 1
+let g:Lf_HideHelp = 1
+"let g:Lf_StlColorscheme = 'powerline'
+let g:Lf_NormalMap = {
+   \ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>'],
+   \            ["<F6>", ':exec g:Lf_py "fileExplManager.quit()"<CR>'] ],
+   \ "Buffer": [["<ESC>", ':exec g:Lf_py "bufExplManager.quit()"<CR>'],
+   \            ["<F6>", ':exec g:Lf_py "bufExplManager.quit()"<CR>'] ],
+   \ "Mru":    [["<ESC>", ':exec g:Lf_py "mruExplManager.quit()"<CR>']],
+   \ "Tag":    [["<ESC>", ':exec g:Lf_py "tagExplManager.quit()"<CR>']],
+   \ "Function":    [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>']],
+   \ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
+   \ }
