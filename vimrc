@@ -15,6 +15,7 @@ syntax on
 "" color scheme
 set background=dark
 colorscheme PaperColor
+" colorscheme onedark
 " colorscheme molokai
 " colorscheme Tomorrow-Night-Eighties
 " colorscheme Tomorrow-Night
@@ -183,12 +184,12 @@ let g:AutoPairsLoaded = 0
 " let g:indentLine_char = '|│'
 let g:indentLine_char = '|'
 " let g:indentLine_char = '┊'
-if (has("gui_running"))
-else
-let g:indentLine_color_term = 239
-let g:indentLine_color_gui = '#A4E57E'
-endif
-let g:indentLine_fileType = ['python', 'c', 'cpp', 'cc']
+"if (has("gui_running"))
+"else
+"let g:indentLine_color_term = 239
+"let g:indentLine_color_gui = '#A4E57E'
+"endif
+"let g:indentLine_fileType = ['python', 'c', 'cpp', 'cc']
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -375,7 +376,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_skip_empty_sections = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='bubblegum'
 
 " let g:airline_left_sep = ''
 " let g:airline_right_sep = ''
@@ -538,17 +539,17 @@ autocmd BufReadPost *
             \ endif
 
 let g:gitgutter_realtime = 1
-set updatetime=500
+" set updatetime=500
 
 """""""""""""""" LeaderF
-let g:Lf_ShortcutF = '<c-p>'
-let g:Lf_ShortcutB = '<m-n>'
+" let g:Lf_ShortcutF = '<c-p>'
+" let g:Lf_ShortcutB = '<m-n>'
 " let g:Lf_WindowPosition = 'right'
 " let g:LeaderfFunction = '<m-n>'
-noremap <c-n> :LeaderfMru<cr>
-noremap <m-p> :LeaderfFunction<cr>
-noremap <m-n> :LeaderfBuffer<cr>
-noremap <m-m> :LeaderfTag<cr>
+" noremap <c-n> :LeaderfMru<cr>
+" noremap <m-p> :LeaderfFunction<cr>
+" noremap <m-n> :LeaderfBuffer<cr>
+" noremap <m-m> :LeaderfTag<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 let g:Lf_CommandMap = {'<C-]>': ['<C-V>']}
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
